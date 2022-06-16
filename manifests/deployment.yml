@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: lakshkumarpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lakshkumarpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: lakshkumarpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: lakshkumarpipelinesjavascriptdocker 
+          image: trainmodelcontainer.azurecr.io/lakshkumarpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
